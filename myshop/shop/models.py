@@ -25,7 +25,7 @@ class Product(models.Model):
     created=models.DateTimeField(auto_now_add=True)
     updated=models.DateTimeField(auto_now=True)
     def get_absolute_url(self):
-        return reverse("show:product_detail",args=[self.id,self.slug])
+     return reverse("shop:product_detail",args=[self.id,self.slug])
     
 
     class Meta:
