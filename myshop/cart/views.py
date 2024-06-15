@@ -1,5 +1,5 @@
 from django.shortcuts import render,redirect,get_object_or_404
-
+from .forms import CartAddPrdouctForm
 # Create your views here.
 from django.views.decorators.http import require_POST
 from shop.models import Product
@@ -32,5 +32,10 @@ def cart_remove(request,product_id):
 
 def cart_detail(request):
     cart=Cart(request)
+    for item in cart:
+      item['update_quantity_form'] = CartAddPrdouctForm(initial={
+         'quantity': item['quantity'],
+ 'override': True})
+
     totalPrice= cart.getTotalPrice()
     return render(request,'cart/detail.html',{'cart':cart,'totalPrice':totalPrice})
