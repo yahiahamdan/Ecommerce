@@ -1,8 +1,6 @@
 # Ecommerce (Django)
-
-This repository is an ecommerce project based on the "Django 4 By Example" shop example. It implements a basic online shop built with Django 4.x and is intended as a learning / starter project that you can extend for production.
-
-IMPORTANT: This project was cloned from the "Django 4 By Example" shop example — please preserve and respect the original license and attribution if you redistribute or publish derived work.
+About
+A scalable Django e-commerce system powered by Celery, RabbitMQ, OAuth, and modern service patterns.”
 
 ## Table of contents
 - [Features](#features)
